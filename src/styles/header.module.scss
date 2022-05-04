@@ -1,0 +1,53 @@
+@import './common/common';
+
+
+.header{
+    padding: 42px 15px;
+    border-bottom: 1px solid #EAEAEA;
+    margin-bottom: 45px;
+    
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.body{
+    height: 44px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoBox{
+    display: flex;
+    align-items: center;
+}
+.logoText{
+    display: flex;
+    flex-direction: column;
+}
+.rightRow{
+    display: flex;
+}
+.basket{
+    display: flex;
+    margin-right: 30px;
+}
+.basketImg{
+    margin-right: 10px;
+}
+.logoImg{
+    margin-right: 16px;
+}
+.name{
+    font-size: 20px;
+}
+.description{
+    font-weight: 400;
+    color: $GRAY;
+}
+.totalPrice{
+    font-weight: 400;
+    color: $BROWN;
+}

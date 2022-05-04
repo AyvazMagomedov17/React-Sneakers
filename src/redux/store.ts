@@ -1,18 +1,25 @@
-import { applyMiddleware, combineReducers, createStore } from "redux";
-import createSagaMiddleware from "@redux-saga/core";
-import reducer from "./reducers";
-import rootSaga from "./sagas/sagas";
+import createSagaMiddleware from 'redux-saga'
+import { combineReducers } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 
 const rootReducer = combineReducers({
-    reducer: reducer
-})
 
+})
 const sagaMiddleware = createSagaMiddleware()
 
-const store = createStore(rootReducer,
-    //@ts-expect-error
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(applyMiddleware(sagaMiddleware))
-)
-sagaMiddleware.run(rootSaga)
 
-export default store
+const setupStore = () => {
+    return configureStore({
+        reducer: rootReducer,
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware().concat(sagaMiddleware),
+    })
+}
+
+export type RootStateType = ReturnType<typeof rootReducer>
+export type AppStoreType = ReturnType<typeof setupStore>
+export type AppDispatchType = AppStoreType['dispatch']
+
+/* export const store = createStore(rootReducer,
+    //@ts-ignore
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(applyMiddleware(sagaMiddleware))) */
