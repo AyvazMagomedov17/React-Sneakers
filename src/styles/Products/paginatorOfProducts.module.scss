@@ -1,0 +1,15 @@
+@import '../common/common';
+.paginator{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.button{
+    background-color: $BROWN;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-weight: $semiBold;
+    border-radius: 8px;
+
+}

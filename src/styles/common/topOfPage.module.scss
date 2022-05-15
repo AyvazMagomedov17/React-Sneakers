@@ -1,0 +1,31 @@
+@import '../common/common';
+
+
+.top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.title{
+    font-size: 32px;
+    margin-left: 21px;
+}
+.goBackImg{
+    width: 35px;
+    height: 35px;
+}
+
+@include media(563px){
+    .title{
+        font-size: 25px;
+    }
+    
+}
+@include media($mobile){
+    
+   .top{
+       margin-bottom: 20px;
+       
+   }
+}
+

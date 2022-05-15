@@ -1,0 +1,94 @@
+@import './common';
+
+.commercial{
+    margin-bottom: 39px;
+}
+.body{
+    height: 300px;
+}
+.row{
+    display: flex;
+}
+.adidasImg{
+    position: absolute;
+    top: 16px;
+    left: 20px;
+}
+.left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 469px;
+    background-color: #F4EFE9;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px ;
+
+}
+.text{
+    margin-top: 40px;
+    font-size: 38px;
+    line-height: 46px;
+    max-width: 240px;
+    margin-left: 61px;
+    margin-bottom: 11px;
+}
+.green{
+    color: $GREEN
+}
+.buyButton{
+    margin-left: 61px;
+    width: 178px;
+    height: 47px;
+    background-color: $GREEN;
+    color: $WHITE;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 110px;
+    
+}
+@include media(935px){
+    .text{
+        margin-top: 40px;
+    }
+    .commercial{
+        margin-bottom: 0px;
+    }
+    .body{
+        height: 250px;
+    }
+}
+@include media(700px){
+    .body{
+        height: 210px;
+    }
+}
+@include media(628px){
+    .text{
+        font-size: 30px;
+        line-height: normal;
+    }
+}
+@include media(433px){
+    .text{
+        font-size: 25px;
+    }
+}
+@include media(535px){
+    .text{
+        
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .adidasImg{
+    display: none;
+    }
+    .body{
+        height: 190px;
+    }
+}
+@include media(373px){
+    .text{
+        font-size: 20px;
+    }
+}

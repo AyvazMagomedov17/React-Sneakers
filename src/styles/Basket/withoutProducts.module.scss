@@ -1,0 +1,33 @@
+@import '../common/common';
+
+.body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 170px;
+}
+.withoutProductsImg{
+    padding: 40px;
+    position: relative;
+    margin-bottom: 21px;
+    max-width:100px;
+    max-height: 100px;
+}
+.withoutProductsImg img {
+    @include responsImg
+}
+.text{
+    margin-bottom: 39px;
+}
+.title{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.description{
+    font-weight: 400;
+    color: $GRAY;
+    font-size: 16px;
+    max-width: 285px;
+}

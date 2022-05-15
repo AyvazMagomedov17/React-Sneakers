@@ -1,0 +1,84 @@
+@import '../common/common';
+
+
+.header{
+    padding: 42px 15px;
+    border-bottom: 1px solid #EAEAEA;
+    margin-bottom: 45px;
+    
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.body{
+    height: 44px;
+    
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoBox{
+    display: flex;
+    align-items: center;
+}
+.logoText{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logoImg{
+    margin-right: 16px;
+}
+.name{
+    font-size: 20px;
+}
+.description{
+    font-weight: 400;
+    color: $GRAY;
+}
+
+
+@media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+    .rightButton:hover{
+        transition: all 0.3s;
+        transform: scale(1.1, 1.1);
+    }
+}
+
+@include media(470px){
+    .name{
+        font-size: 16px;
+    }
+    .description{
+        display: none;
+    }
+    .header{
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+}
+@include media(440px){
+    .name{
+        font-size: 15px;
+    }
+    .logoImg{
+       width: 35px;
+    }
+}
+@include media($mobile){
+    .rightRow{
+        display: none;
+    }
+    
+}
+@include media($tablet){
+    .header{
+        padding: 20px 15px;
+        
+
+    }
+}

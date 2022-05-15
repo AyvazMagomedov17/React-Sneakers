@@ -1,0 +1,95 @@
+@import '../common';
+
+.productInfo{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.688);
+
+}
+.content{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    background-color: $WHITE;
+    min-width: 700px;
+    min-height: 400px;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+.row{
+    display: flex;
+    padding: 50px;
+    
+    align-items: center;
+}
+.left{
+    
+    flex: 0 0 200px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.image{
+    margin-bottom: 50px;
+    transition: all 0.3s;
+
+}
+
+
+.image img {
+    width: 200px;
+    height: auto;
+}
+.greenButton{
+    background-color:rgb(85, 189, 106);
+    width: 210px;
+    margin-bottom: 5px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 30px;
+    border-radius: 8px;
+    padding: 5px;
+    transition: all 0.3s;
+
+}
+
+.redButton{
+    padding: 5px;
+    width: 210px;
+    margin-bottom: 5px;
+    background-color: rgb(116, 16, 16);
+    min-height: 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #ffff;
+    text-transform: uppercase;
+
+}
+.top{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+.closeButton{
+    font-size: 18px
+}
+
+@media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+    .greenButton:hover{
+        background:rgba(6, 108, 89, 0.879);
+        transition: all 0.3s;
+    }
+    .image:hover{
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+    .redButton:hover{
+        background-color: #960c0cd1;
+        transition: all 0.3s ;
+    }
+    }

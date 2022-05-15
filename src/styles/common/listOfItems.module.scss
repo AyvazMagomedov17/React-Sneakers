@@ -1,0 +1,22 @@
+@import '../common/common';
+.items{
+    display: grid; 
+justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  gap: 40px 40px; 
+  margin-bottom: 30px;
+  @include media($problem){
+      gap: 40px 10px;
+  }
+  @include media($tablet){
+    grid-template-columns: 1fr 1fr 1fr; 
+  }
+  @include media(580px){
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 10px;
+  }
+  
+}
+
+
+

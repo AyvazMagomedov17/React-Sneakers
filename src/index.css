@@ -46,6 +46,7 @@ ol[class] {
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  
 }
 
 /* Упрощаем работу с изображениями */
@@ -66,11 +67,15 @@ textarea,
 select {
   font: inherit;
   border: none;
+  background-color: transparent;
 }
 button{
     cursor: pointer;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -83,4 +88,9 @@ button{
 body{
     font-weight: 700;
     font-size: 14px;
+    overflow-x: hidden;
+    
+}
+#root{
+    overflow-y: hidden;
 }

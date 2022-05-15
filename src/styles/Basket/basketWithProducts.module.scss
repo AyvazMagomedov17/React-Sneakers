@@ -1,0 +1,20 @@
+@import '../common/common';
+.totalPrice{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 40px;
+    margin-bottom: 25px;
+ }
+ .totalPrice::after{
+     content: '';
+     width: 100%;
+     height: 0.5px;
+     background-color: $GRAY;
+     position: absolute;
+     bottom: 0;
+ }
+
+ .arrow{
+     padding-left: 20px;
+ }

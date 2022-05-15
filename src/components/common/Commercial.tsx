@@ -1,6 +1,6 @@
-import s from '../styles/commercial.module.scss'
-import adidasSvg from '../assets/img/Main/adidas.svg'
-import commercialJpg from '../assets/img/Main/commercial.jpg'
+import s from '../../styles/common/commercial.module.scss'
+import adidasSvg from '../../assets/img/Main/adidas.svg'
+import commercialJpg from '../../assets/img/Main/commercial.jpg'
 type Props = {}
 
 const Commercial = (props: Props) => {
@@ -16,9 +16,7 @@ const Commercial = (props: Props) => {
                             <span className={s.green}>Stan Smith</span>,
                             Forever!
                         </p>
-                        <button className={s.buyButton}>
-                            купить
-                        </button>
+
                     </div>
                     <div className={s.right}>
                         <div className={s.mainImg}>

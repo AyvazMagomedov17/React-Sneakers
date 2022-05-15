@@ -1,49 +1,52 @@
 import logoSvg from '../../assets/Header/logo.svg'
 import basketSvg from '../../assets/Header/basket.svg'
 import likeSvg from '../../assets/Header/like.svg'
-import { NavLink } from "react-router-dom"
-import s from '../../styles/header.module.scss'
-type PropsType = {
+import avatarSvg from '../../assets/Header/avatar.svg'
+import s from '../../styles/Header/header.module.scss'
+import { useAppSelector } from '../../hooks/redux'
+import { NavLink } from 'react-router-dom'
+import cn from 'classnames'
+import BurgerButton from './BurgerButton'
+import { useState } from 'react'
+import Menu from './Menu'
+import BasketButton from '../Basket/BasketButton'
+import BurgerMenu from './BurgerMenu'
 
+type PropsType = {
+    setIsBasketOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
 
-const Header = ({ }: PropsType) => {
+const Header = ({ setIsBasketOpen }: PropsType) => {
+    const totalPrice = useAppSelector(state => state.basketSlice.totalPrice)
+    const [basketMenuIsOpen, setBasketMenuIsOpen] = useState(false)
+    const clickOnBasketButton = () => {
+        setIsBasketOpen(true)
+    }
     return (
         <div className={s.header}>
             <div className={s.container}>
                 <div className={s.body}>
                     <div className={s.row}>
-                        <div className={s.logoBox}>
-                            <div className={s.logoImg}>
-                                <img src={logoSvg} alt="logotype" />
-                            </div>
-                            <div className={s.logoText}>
-                                <span className={s.name}>
-                                    REACT SNEAKERS
-                                </span>
-                                <span className={s.description}>
-                                    Магазин лучших кроссовок
-                                </span>
-                            </div>
-                        </div>
-                        <div className={s.right}>
-                            <div className={s.rightRow}>
-                                <div className={s.basket}>
-                                    <div className={s.basketImg}>
-                                        <img src={basketSvg} alt="basket" />
-
-                                    </div>
-                                    <div className={s.totalPrice}>
-                                        1205 руб.
-                                    </div>
+                        <NavLink to='/'>
+                            <div className={s.logoBox}>
+                                <div className={s.logoImg}>
+                                    <img src={logoSvg} alt="logotype" />
                                 </div>
-                                <div className={s.like}>
-                                    <img src={likeSvg} alt="like" />
+                                <div className={s.logoText}>
+                                    <span className={s.name}>
+                                        REACT SNEAKERS
+                                    </span>
+                                    <span className={s.description}>
+                                        Магазин лучших кроссовок
+                                    </span>
                                 </div>
                             </div>
-                        </div>
+                        </NavLink>
+                        {basketMenuIsOpen ? <BurgerMenu setBasketMenuIsOpen={setBasketMenuIsOpen} clickOnBasketButton={clickOnBasketButton} avatarSvg={avatarSvg} totalPrice={totalPrice} likeSvg={likeSvg} basketSvg={basketSvg} /> : <Menu avatarSvg={avatarSvg} basketSvg={basketSvg} clickOnBasketButton={clickOnBasketButton} likeSvg={likeSvg} totalPrice={totalPrice} />
+                        }
+                        <BurgerButton setBasketMenuIsOpen={setBasketMenuIsOpen} />
                     </div>
                 </div>
             </div>

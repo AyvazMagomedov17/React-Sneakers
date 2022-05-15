@@ -1,0 +1,53 @@
+@import  '../common/common';
+
+.basket{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #00000065;
+    
+    
+}
+.content{
+    position: absolute;
+    right: 18px;
+    top: 0;
+    background: #FFFFFF;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    height: 100vh;
+    width: 385px;
+    padding: 32px 5px 0 30px;
+    overflow-y: scroll;
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.exitButton{
+    font-size: 16px;
+}
+.title{
+    font-size: 24px;
+   
+}
+
+@include media($tablet) {
+    .content{
+        right: 2px;
+       
+    }
+}
+
+@include media($mobile){
+    .content{
+       right: 0;
+        width: 100vw;
+        padding-left: 20px;
+    }
+
+}

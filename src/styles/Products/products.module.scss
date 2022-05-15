@@ -1,0 +1,32 @@
+@import '../common/common';
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.title{
+    font-size: 32px;
+}
+
+@include media($tablet){
+    .top{
+        margin-bottom: 20px;
+    }
+    
+}
+@include media($mobile){
+    .top{
+        flex-direction: column;
+        margin-top: -200px;
+    }
+    
+}
+@include media(570px){
+    .top{
+        margin-top: -30px;
+    }
+   
+}
+
+

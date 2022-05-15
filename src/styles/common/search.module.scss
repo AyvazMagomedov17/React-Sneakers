@@ -1,0 +1,120 @@
+@import './common';
+
+.body{
+    display:flex;
+    border: 1px solid #F3F3F3;
+    border-radius: 10px;
+    width: 250px;
+    height: 45px;
+    align-items: center;
+    padding-left: 18px;
+    border-radius: 8px;
+    transition: all 0.3s;
+
+}
+
+.input{
+    height: 45px;
+    width: 100%;
+    color: $BROWN;
+    padding-left: 13px;
+    outline: 0;
+
+   
+
+}
+
+
+.filterBox{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid $GRAY;
+    border-radius: 8px;
+}
+
+
+.isLiked {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    
+  }
+  /* для элемента label связанного с .custom-radio */
+  .isLiked+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor:pointer;
+  }
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  .isLiked+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  /* стили при наведении курсора на радио */
+  .isLiked:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+  }
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  .isLiked:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+  }
+  /* стили для радиокнопки, находящейся в фокусе */
+  .isLiked:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  .isLiked:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+  }
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  .isLiked:checked+label::before {
+    border-color: #0b76ef;
+    background-color: $GREEN;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  }
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  .custom-radio:disabled+label::before {
+    background-color: #e9ecef;
+  }
+  
+  @media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+    .body:hover{
+        background-color: #cbc5c5a1;
+        transition: all 0.3s;
+    }
+  }
+
+@include media(510px){
+    .search{
+        width: 200px;
+        margin-top: 40px;
+    }
+    
+}
+@include media($mobile){
+    .container{
+        display: flex;
+        width: 450px;
+        justify-content: flex-end;
+        padding-right: 80px;
+        margin-top: -30px;
+    }
+}
+@include media(375px){
+    .container{
+        padding-right: 150px;
+    }
+}

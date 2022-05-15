@@ -1,0 +1,26 @@
+@import '../common/common';
+
+.rightRow{
+    display: flex;
+    gap: 20px;
+}
+.basket{
+    display: flex;
+    
+}
+.basketImg{
+    margin-right: 10px;
+}
+.totalPrice{
+    font-weight: 400;
+    color: $BROWN;
+}
+.rightButton{
+    transition: all 0.3s;
+}
+
+@include media($mobile){
+    .right{
+        display: none;
+    }
+}

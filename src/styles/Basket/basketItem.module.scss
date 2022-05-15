@@ -1,0 +1,58 @@
+@import '../common/common';
+
+.basketItem{
+    margin-bottom: 20px;
+}
+.basketItem:last-child{
+    margin: 0
+}
+
+.body{
+    width:325px;
+    height: 119px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #F3F3F3;
+    border-radius: 20px;
+    justify-content: center;
+    
+}
+.imageBox{
+    position: relative;
+    
+    margin-right: 21px;
+    
+    padding: 10% 12.3% 10% 10%;
+}
+.imageBox img {
+    @include responsImg
+}
+.descriptionBox{
+   display: flex;
+   flex-direction: column;
+   margin-right: 12px;
+  
+}
+.title{
+    max-width: 150px;
+    font-weight: $regular;
+}
+.deleteButton{
+    border-radius: 8px;
+    color: $GRAY;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F2F2F2;
+    width: 32px;
+    height: 32px;
+}
+@include media($mobile){
+    .body{
+        width: 300px;
+        
+    }
+    
+}

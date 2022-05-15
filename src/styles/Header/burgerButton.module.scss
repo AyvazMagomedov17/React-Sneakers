@@ -1,0 +1,41 @@
+@import '../common/common';
+
+.burger{
+    display: none;
+   
+    width: 100vh;
+    background-color: black;
+    
+}
+.burger span{
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 5px;
+}
+.burger::before{
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 0px;
+}
+.burger::after{
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 10px;
+}
+@include media($mobile){
+    .burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        
+    }
+}

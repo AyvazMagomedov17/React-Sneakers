@@ -1,0 +1,161 @@
+@import '../common/common';
+.product{
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 40px;
+
+}
+
+.column{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    height: 260px;
+    padding-left: 33px;
+    justify-content: center;
+    border: 1px solid #F3F3F3;
+    border-radius: 40px;
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.07);
+    
+}
+
+
+.likeImg{
+    position: absolute;
+    left: 30px;
+    top: 29px;
+}
+.title{
+    font-weight: $regular;
+    max-width: 150px;
+    padding-bottom: 14px;
+}
+.priceBox{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+.price{
+    display: flex;
+    flex-direction: column;
+}
+.priceDescription{
+    color: $GRAY;
+    font-weight: $medium;
+    text-transform: uppercase;
+}
+.addButton{
+    display: flex ;
+    justify-content: center ;
+    align-items:  center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px ;
+    transition: all 0.3s ;
+}
+.notGreenButton{
+    border: 1px solid #F2F2F2;
+}
+.greenButton{
+    background: linear-gradient(180deg, #89F09C 0%, #3CC755 100%);
+    transition: all 0.3s;
+
+}
+.likeButton{
+    width: 32px;
+    height: 32px;
+    display: flex ;
+    justify-content: center ;
+    align-items:  center;
+    border-radius: 8px ;
+    transition: all 0.3s ;
+    border: 1px solid #F2F2F2;
+}
+
+.redButton{
+    background: #FEF0F0;
+}
+@media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+    .product:hover{
+        transform: scale(1.1, 1.1);
+        transition: all 0.3s;
+        box-shadow: 15px 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    .addButton:hover{
+        background-color: #6b6767e7 ;
+        transition: all 0.3s;
+    }
+    .greenButton:hover{
+        background: rgba(111, 18, 18, 0.721);
+        transition: all  1s;
+    }
+    .likeButton:hover{
+        background-color:  #ada3a341;
+        transition: all 0.3s ;
+    }
+    .redButton:hover{
+        background-color: #3d0404d1;
+        transition: all 0.3s ;
+    }
+}
+
+
+@include media($problem){
+.column{
+    width: 180px;
+}
+.priceBox{
+    justify-content: flex-start
+}
+.price{
+    margin-right: 20px;
+}
+.sneakerImg {
+    width: 110px;
+    height: 100px;
+}
+}
+
+@include media(396px){
+    .column{
+        width: 140px;
+        padding-left: 20px;
+        border-radius: 20px;
+    }
+    .sneakerImg {
+        width: 90px;
+        padding-top: 20px;
+    }
+    .addButton{
+        margin-top: -10px;
+        margin-left: -8px;
+    }
+    .price{
+        margin-top: 5px;
+        margin-right: 0;
+    }
+    .priceBox{
+        justify-content: flex-start;
+        
+    }
+    .title{
+        width: 100px;
+        font-size: 13px
+    }
+    .priceDescription{
+        font-size: 13px;
+    }
+    .price{
+        font-size: 13px;
+        padding-right: 10px;
+    }
+}
+@include media(580px){
+    .column{
+        border-radius: 20px;
+    }
+}
+
+ 
+ 
