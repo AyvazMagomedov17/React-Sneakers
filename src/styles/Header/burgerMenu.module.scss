@@ -58,6 +58,7 @@
 .totalPrice{
     font-weight: 400;
     color: $BROWN;
+    max-width: px;
 }
 .extiButton{
     position: absolute;
@@ -74,4 +75,10 @@
     font-weight: 400;
     letter-spacing: 1px;
     margin-right: 10px;
+}
+
+@include media(370px){
+    .rightRow{
+        padding-left: 80px;
+    }
 }

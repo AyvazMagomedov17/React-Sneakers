@@ -18,6 +18,7 @@
 @include media($mobile){
     .top{
         flex-direction: column;
+        
         margin-top: -200px;
     }
     

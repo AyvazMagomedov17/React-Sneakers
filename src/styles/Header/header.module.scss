@@ -42,12 +42,7 @@
 }
 
 
-@media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
-    .rightButton:hover{
-        transition: all 0.3s;
-        transform: scale(1.1, 1.1);
-    }
-}
+
 
 @include media(470px){
     .name{
@@ -73,12 +68,13 @@
     .rightRow{
         display: none;
     }
+    .header{
+        margin-bottom: 50px;
+    }
     
 }
 @include media($tablet){
     .header{
         padding: 20px 15px;
-        
-
     }
 }

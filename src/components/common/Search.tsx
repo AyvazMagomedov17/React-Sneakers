@@ -38,7 +38,7 @@ const Search = ({ }: PropsType) => {
                     <div className={s.column}>
                         <div className={s.search}>
                             <div className={s.body}>
-                                <div className={s.findImg}>
+                                <div onClick={() => handleSubmit()} className={s.findImg}>
                                     <img src={findSvg} alt="find icon" />
                                 </div>
                                 <input name='filter.title' onKeyDown={(e) => {

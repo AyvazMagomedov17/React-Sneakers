@@ -18,6 +18,7 @@
     min-height: 400px;
     transform: translate(-50%, -50%);
     border-radius: 20px;
+    overflow-x: scroll;
 }
 .row{
     display: flex;
@@ -31,6 +32,7 @@
     margin-right: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     
 }
 .image{
@@ -68,6 +70,7 @@
     font-weight: 600;
     color: #ffff;
     text-transform: uppercase;
+    transition: all 0.3s;
 
 }
 .top{
@@ -93,3 +96,110 @@
         transition: all 0.3s ;
     }
     }
+
+@include media(705px){
+    .left{
+        margin-right: 30px;
+    }
+    .row{
+        padding-top: 0;
+    }
+    .content{
+        min-width: auto;
+        width: 600px;
+        min-height: auto;
+        height: 500px;
+       
+    }
+}
+@include media(612px){
+        .content{
+            width: 550px;
+            min-height: 400px;
+            max-height: auto;
+        }
+
+        .image img{
+            width: 170px;
+        }
+        .row{
+            padding-top: 20px;
+            padding-left: 30px ;
+            padding-right: 20px;
+        }
+        .redButton{
+            width: 190px;
+            font-size: 12px;
+        }
+        .greenButton{
+            width: 190px;
+            font-size: 12px;
+        }
+        
+}
+@include media(558px){
+    .content{
+        width: 500px;
+    }
+}
+@include media(509px){
+    .content{
+        width: 450px;
+    }
+    .image img{
+        width: 140px;
+     }
+    
+    .redButton{
+        width: 180px;
+    }
+    .greenButton{
+        width: 180px;
+       
+    }
+    .left{
+        margin-right: 5px   ;
+    }
+    .row{
+        padding-left: 20px;
+    }
+}
+
+@include media(458px){
+    .content{
+        width: 400px;
+    }
+    .title{
+
+    }
+    .image img{
+        width: 150px;
+     }
+     .left{
+         align-items: center;
+     }
+     .redButton{
+        width: 170px;
+        font-size: 11px
+    }
+    .greenButton{
+        width: 170px;
+        font-size: 11px
+       
+    }
+}
+
+@include media($mobile){
+    .content{
+        width: 305px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .greenButton:first-child{
+        margin-right: 10px;
+    }
+    .redButton:first-child{
+        margin-right: 10px;
+    }
+}

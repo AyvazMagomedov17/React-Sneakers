@@ -92,5 +92,5 @@ body{
     
 }
 #root{
-    overflow-y: hidden;
+    overflow-x: hidden;
 }

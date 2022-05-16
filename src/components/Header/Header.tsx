@@ -5,11 +5,9 @@ import avatarSvg from '../../assets/Header/avatar.svg'
 import s from '../../styles/Header/header.module.scss'
 import { useAppSelector } from '../../hooks/redux'
 import { NavLink } from 'react-router-dom'
-import cn from 'classnames'
 import BurgerButton from './BurgerButton'
 import { useState } from 'react'
 import Menu from './Menu'
-import BasketButton from '../Basket/BasketButton'
 import BurgerMenu from './BurgerMenu'
 
 type PropsType = {

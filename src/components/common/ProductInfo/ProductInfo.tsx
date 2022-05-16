@@ -49,7 +49,7 @@ const ProductInfo = ({ likeFunc, addInBasket, setIsOpen, img, description, id, i
                                 <div className={s.buttonsBox}>
                                     {isInBasket ? <button onClick={addInBasket} className={cn(s.deleteFromBasketButton, s.redButton)}>Удалить из корзины</button> : <button onClick={addInBasket} className={cn(s.addInBasketButton, s.greenButton)}>Добавить в корзину</button>
                                     }
-                                    {isLiked ? <button onClick={likeFunc} className={cn(s.dislileButton, s.redButton)}>Удалить из избранного</button> : <button onClick={likeFunc} className={cn(s.likeButton, s.greenButton)}>Добавить в избранное</button>
+                                    {isLiked ? <button onClick={likeFunc} className={cn(s.dislikeButton, s.redButton)}>Удалить из избранного</button> : <button onClick={likeFunc} className={cn(s.likeButton, s.greenButton)}>Добавить в избранное</button>
                                     }
                                 </div>}
                         </div>

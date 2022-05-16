@@ -98,7 +98,7 @@ const Products = memo((props: Props) => {
         if (product.isInBasket) {
             basketProducts.forEach(item => {
                 if (product.idForBasket === item.idForBasket) {
-                    debugger
+
                     dispatch(deleteItemFromBasketSagaAc(item.id))
                     dispatch(toggleIsInBasketSagaAC(product?.id, false))
                 }
@@ -113,9 +113,9 @@ const Products = memo((props: Props) => {
 
             dispatch(toggleIsLikedSagaAC(product.id, false))
             bookmarksItems.forEach(item => {
-                debugger
+
                 if (item.idForBasket === product.idForBasket) {
-                    debugger
+
                     dispatch(deleteItemFromBookmarkSagaAc(item.id))
                     setProductsInfoIsOpen(false)
                 }

@@ -18,7 +18,12 @@
 .rightButton{
     transition: all 0.3s;
 }
-
+@media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+    .rightButton:hover{
+        transition: all 0.3s;
+        transform: scale(1.1, 1.1);
+    }
+}
 @include media($mobile){
     .right{
         display: none;

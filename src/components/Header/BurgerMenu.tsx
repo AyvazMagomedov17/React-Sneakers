@@ -42,9 +42,7 @@ const BurgerMenu = ({ setBasketMenuIsOpen, totalPrice, clickOnBasketButton, bask
                             <div className={s.basketImg}>
                                 <img src={basketSvg} alt="basket" />
                             </div>
-                            <div className={s.totalPrice}>
-                                {totalPrice.toLocaleString('ru')} руб.
-                            </div>
+
                         </button>
                     </div>
 
