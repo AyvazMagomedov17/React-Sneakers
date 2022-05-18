@@ -18,7 +18,7 @@ type PropsType = {
 
 const Header = ({ setIsBasketOpen }: PropsType) => {
     const totalPrice = useAppSelector(state => state.basketSlice.totalPrice)
-    const [basketMenuIsOpen, setBasketMenuIsOpen] = useState(false)
+    const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false)
     const clickOnBasketButton = () => {
         setIsBasketOpen(true)
     }
@@ -42,9 +42,9 @@ const Header = ({ setIsBasketOpen }: PropsType) => {
                                 </div>
                             </div>
                         </NavLink>
-                        {basketMenuIsOpen ? <BurgerMenu setBasketMenuIsOpen={setBasketMenuIsOpen} clickOnBasketButton={clickOnBasketButton} avatarSvg={avatarSvg} totalPrice={totalPrice} likeSvg={likeSvg} basketSvg={basketSvg} /> : <Menu avatarSvg={avatarSvg} basketSvg={basketSvg} clickOnBasketButton={clickOnBasketButton} likeSvg={likeSvg} totalPrice={totalPrice} />
+                        {burgerMenuIsOpen ? <BurgerMenu setBurgerMenuIsOpen={setBurgerMenuIsOpen} clickOnBasketButton={clickOnBasketButton} avatarSvg={avatarSvg} totalPrice={totalPrice} likeSvg={likeSvg} basketSvg={basketSvg} /> : <Menu avatarSvg={avatarSvg} basketSvg={basketSvg} clickOnBasketButton={clickOnBasketButton} likeSvg={likeSvg} totalPrice={totalPrice} />
                         }
-                        <BurgerButton setBasketMenuIsOpen={setBasketMenuIsOpen} />
+                        <BurgerButton setBurgerMenuIsOpen={setBurgerMenuIsOpen} />
                     </div>
                 </div>
             </div>

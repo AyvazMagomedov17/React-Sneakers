@@ -19,7 +19,7 @@ const ListOfItems = ({ getProduct, setProductsInfoIsOpen, isArrayOfBookmarks = f
         return <ProductsLoader />
     })
     if (arrayOfItems?.length == 0 && !isLoading) {
-        debugger
+
         return (
             <div className={s.notFind}>Ничего не найдено(</div>
         )

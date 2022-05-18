@@ -69,9 +69,7 @@ select {
   border: none;
   background-color: transparent;
 }
-button{
-    cursor: pointer;
-}
+
 a{
     text-decoration: none;
     color: black;
@@ -93,4 +91,10 @@ body{
 }
 #root{
     overflow-x: hidden;
+}
+@media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+    button{
+        cursor: pointer;
+    }
+
 }

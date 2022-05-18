@@ -43,7 +43,9 @@ const Search = ({ }: PropsType) => {
                                 </div>
                                 <input name='filter.title' onKeyDown={(e) => {
                                     if (e.keyCode === 13) handleSubmit()
-                                }} value={values.filter.title} placeholder='Поиск...' onChange={async (e) => {
+
+                                }} value={values.filter.title} placeholder='Поиск...' onChange={(e) => {
+
                                     handleChange(e)
 
 

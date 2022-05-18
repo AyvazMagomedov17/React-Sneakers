@@ -15,15 +15,10 @@ const SCLoader = styled.div`
 `
 const Loader = ({ isLoading }: PropsType) => {
     return (
-        <AnimatePresence>
-            {isLoading && <motion.div exit={{ opacity: 0, position: 'relative', transitionDuration: '0.3s', bottom: -100 }}>
-                <SCLoader>
-                    <img src={loaderGif} alt="" />
-                </SCLoader>
-            </motion.div>}
 
-        </AnimatePresence>
-
+        <SCLoader>
+            <img src={loaderGif} alt="" />
+        </SCLoader>
     )
 }
 

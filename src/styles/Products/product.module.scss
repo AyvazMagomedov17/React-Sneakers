@@ -1,10 +1,10 @@
 @import '../common/common';
 .product{
     transition: all 0.3s;
-    cursor: pointer;
     border-radius: 40px;
 
 }
+
 
 .column{
     position: relative;
@@ -35,6 +35,7 @@
     display: flex;
     justify-content: space-between;
     width: 150px;
+    padding-bottom: 20px;
 }
 .price{
     display: flex;
@@ -77,6 +78,9 @@
     background: #FEF0F0;
 }
 @media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+    .product{
+        cursor: pointer;
+    }
     .product:hover{
         transform: scale(1.1, 1.1);
         transition: all 0.3s;
@@ -118,22 +122,32 @@
 }
 
 @include media(396px){
-    .column{
-        width: 140px;
-        padding-left: 20px;
-        border-radius: 20px;
-    }
-    .sneakerImg {
-        width: 90px;
-        padding-top: 20px;
+    .likeImg{
+        top: 20px;
+        left: 15px;
     }
     .addButton{
-        margin-top: -10px;
+        width: 30px;
+        height: 30px;
+    }
+    .column{
+        width: 162px;
+        padding-left: 20px;
+        border-radius: 20px;
+        min-height: 250px;
+    }
+    .sneakerImg {
+        padding-top: 10px;
+        width: 90px;
+        margin-top: 10px;
+    }
+    .addButton{
+        margin-top: -2px;
         margin-left: -8px;
     }
     .price{
         margin-top: 5px;
-        margin-right: 0;
+        margin-right: 19px;
     }
     .priceBox{
         justify-content: flex-start;
@@ -141,15 +155,47 @@
     }
     .title{
         width: 100px;
-        font-size: 13px
+        font-size: 13px;
+        padding: 0;
+    
     }
     .priceDescription{
         font-size: 13px;
     }
     .price{
         font-size: 13px;
-        padding-right: 10px;
     }
+}
+@include media(352px){
+    .column{
+           width: 150px;; 
+    }
+}
+@include media(329px){
+    .column{
+        width: 120px;
+        height: 182px;
+        padding-left: 10px;
+        
+    }
+   .addButton{
+       margin-top: 5px;
+       width: 25px;
+       height: 25px;
+   }
+    .sneakerImg{
+        width: 80px;
+    }
+    .price{
+        font-size: 10px;
+    }
+    .title{
+        font-size: 11px;
+    }
+    .priceDescription{
+        font-size: 11px;
+        }
+    
 }
 @include media(580px){
     .column{

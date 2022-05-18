@@ -132,6 +132,7 @@ const Products = memo((props: Props) => {
             <div className={s.body}>
                 <div className={s.column}>
                     <div className={s.top}>
+
                         <TopOfPage title='Все кроссовки' />
                         <Search />
                     </div>

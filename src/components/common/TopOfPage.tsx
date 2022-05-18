@@ -13,6 +13,7 @@ const TopOfPage = ({ title, goBack }: Props) => {
                 <img className={s.goBackImg} src={goBackSvg} alt="go back image" />
             </NavLink>}
             <div className={s.title}>{title}</div>
+
         </div>
     )
 }

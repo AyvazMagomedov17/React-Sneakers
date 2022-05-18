@@ -71,7 +71,7 @@
 }
 @include media(433px){
     .text{
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 @include media(535px){
@@ -90,5 +90,30 @@
 @include media(373px){
     .text{
         font-size: 20px;
+    }
+}
+@include media(314px){
+    .text{
+        font-size: 18px;
+    }
+}
+@include media(292px){
+    .text{
+        font-size: 16px;
+    }
+}
+@include media(268px){
+    .text{
+        font-size: 14px;
+    }
+}
+@include media(244px){
+    .text{
+       margin-left: 10px;
+    }
+}
+@include media(220px){
+    .text{
+        font-size: 12px;
     }
 }
