@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from 'framer-motion'
 import styled from 'styled-components'
 import loaderGif from '../../assets/img/Loader/loader.gif'
 

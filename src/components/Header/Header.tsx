@@ -42,7 +42,7 @@ const Header = ({ setIsBasketOpen }: PropsType) => {
                                 </div>
                             </div>
                         </NavLink>
-                        {burgerMenuIsOpen ? <BurgerMenu setBurgerMenuIsOpen={setBurgerMenuIsOpen} clickOnBasketButton={clickOnBasketButton} avatarSvg={avatarSvg} totalPrice={totalPrice} likeSvg={likeSvg} basketSvg={basketSvg} /> : <Menu avatarSvg={avatarSvg} basketSvg={basketSvg} clickOnBasketButton={clickOnBasketButton} likeSvg={likeSvg} totalPrice={totalPrice} />
+                        {burgerMenuIsOpen ? <BurgerMenu burgerMenuIsOpen={burgerMenuIsOpen} setBurgerMenuIsOpen={setBurgerMenuIsOpen} clickOnBasketButton={clickOnBasketButton} avatarSvg={avatarSvg} totalPrice={totalPrice} likeSvg={likeSvg} basketSvg={basketSvg} /> : <Menu avatarSvg={avatarSvg} basketSvg={basketSvg} clickOnBasketButton={clickOnBasketButton} likeSvg={likeSvg} totalPrice={totalPrice} />
                         }
                         <BurgerButton setBurgerMenuIsOpen={setBurgerMenuIsOpen} />
                     </div>

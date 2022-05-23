@@ -169,9 +169,7 @@
     .content{
         width: 400px;
     }
-    .title{
-
-    }
+    
     .image img{
         width: 150px;
      }
@@ -196,10 +194,7 @@
     .row{
         flex-direction: column;
     }
-    .greenButton:first-child{
-        margin-right: 10px;
-    }
-    .redButton:first-child{
-        margin-right: 10px;
+    .buttonsBox{
+        margin-bottom: 20px;
     }
 }

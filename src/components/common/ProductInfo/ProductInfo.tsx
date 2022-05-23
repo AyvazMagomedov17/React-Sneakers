@@ -1,6 +1,4 @@
 import { Dispatch, useEffect } from 'react'
-import { useAppSelector } from '../../../hooks/redux'
-import { getProductIsLoadingSelector } from '../../../redux/Selectors/productSelectors'
 import s from '../../../styles/common/ProductInfo/productInfo.module.scss'
 import { productType } from '../../../types/apiTypes'
 import cn from 'classnames'

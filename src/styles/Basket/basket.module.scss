@@ -12,7 +12,7 @@
 }
 .content{
     position: absolute;
-    right: 18px;
+    right: 0px;
     top: 0;
     background: #FFFFFF;
     box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,20 @@
     width: 385px;
     padding: 32px 5px 0 30px;
     overflow-y: scroll;
+    
+    
 }
+.contentIsClosed{
+    right: -300px;
+    transition: all 0.29s;
+    transition-timing-function: linear;
+}
+.contentIsOpen{
+    transition: all 0.25s;
+    transition-timing-function: linear;
+    right: 0px;
+}
+
 .top{
     display: flex;
     align-items: center;
@@ -41,6 +54,16 @@
         right: 2px;
        
     }
+    .contentIsClosed{
+        right: -300px;
+        transition: all 0.29s;
+        transition-timing-function: linear;
+    }
+    .contentIsOpen{
+        transition: all 0.25s;
+        transition-timing-function: linear;
+        right: 2px;
+    }
 }
 
 @include media($mobile){
@@ -48,6 +71,16 @@
        right: 0;
         width: 100vw;
         padding-left: 20px;
+    }
+    .contentIsClosed{
+        right: -300px;
+        transition: all 0.29s;
+        transition-timing-function: linear;
+    }
+    .contentIsOpen{
+        transition: all 0.25s;
+        transition-timing-function: linear;
+        right: 0px;
     }
 
 }

@@ -1,30 +1,38 @@
-@import '../common/common';
+@import "../common/common";
 
-.right{ 
-    background-color:rgba(0, 0, 0, 0.2);
+.right {
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    
 }
-.content{
-    
+.content {
     gap: 20px;
     z-index: 1;
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
     justify-content: center;
-    background-color:rgba(0, 0, 0, 0.2);
-      align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center;
     width: 100vw;
     height: 100vh;
 }
-.rightRow{
-   padding-left: 100px;
+.closed {
+    left: -500px;
+    transition: all 0.5s;
+    transition-timing-function: linear;
+}
+.open {
+    left: 0px;
+    transition: all 0.3s;
+    transition-timing-function: linear;
+}
+.rightRow {
+    padding-left: 100px;
     display: flex;
     gap: 20px;
     z-index: 1;
@@ -33,52 +41,50 @@
     flex-direction: column;
     transform: translate(0%, -50%);
     justify-content: center;
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
     width: 90vw;
     height: 100vh;
 }
-.rightButton{
+.rightButton {
     transition: all 0.3s;
     display: flex;
     align-items: center;
 }
-.rightButton{
+.rightButton {
     transition: all 0.3s;
     transform: scale(1);
     padding-bottom: 50px;
 }
 
-.basket{
+.basket {
     display: flex;
-    
 }
-.basketImg{
+.basketImg {
     margin-right: 10px;
 }
-.totalPrice{
+.totalPrice {
     font-weight: 400;
     color: $BROWN;
     max-width: px;
 }
-.extiButton{
+.extiButton {
     position: absolute;
     right: 10px;
     top: 30px;
     font-size: 18px;
-   
 }
-.rowButton{
+.rowButton {
     display: flex;
     transform: scale(1.5);
 }
-.buttonText{
+.buttonText {
     font-weight: 400;
     letter-spacing: 1px;
     margin-right: 10px;
 }
 
-@include media(370px){
-    .rightRow{
+@include media(370px) {
+    .rightRow {
         padding-left: 80px;
     }
 }

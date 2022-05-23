@@ -1,7 +1,6 @@
-import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import cn from 'classnames'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
-import { basketSliceActions } from '../../redux/reducers/basketSlice'
 import { getBasketItemsIsCheckout, getTotalBasketItemsCountSelector } from '../../redux/Selectors/basketSliceSelectors'
 import s from '../../styles/Basket/basket.module.scss'
 import BasketWithProducts from './BasketWithProducts'
@@ -25,12 +24,16 @@ const Basket = ({ isActive, setIsBasketOpen, }: PropsType) => {
         }, 300);
         setContentIsOpen(false)
     }
-    const [contentIsOpen, setContentIsOpen] = useState(true)
+    useEffect(() => {
+        setTimeout(() => {
+            setContentIsOpen(true)
+        }, 0.1)
+    }, [isActive])
+    const [contentIsOpen, setContentIsOpen] = useState(false)
     const dispatch = useAppDispatch()
     const totalBasketItemsCount = useAppSelector(getTotalBasketItemsCountSelector)
     const basketItemsCheckout = useAppSelector(getBasketItemsIsCheckout)
     const isSetShopping = useAppSelector(getIsSetShoppingSelector)
-    console.log(isSetShopping, 'isSetShopping')
 
     useEffect(() => {
         dispatch({ type: GET_BASKET_ITEMS })
@@ -45,23 +48,18 @@ const Basket = ({ isActive, setIsBasketOpen, }: PropsType) => {
 
     return (
         <div onClick={removeBasket} className={s.basket}>
-            <AnimatePresence>
-                {contentIsOpen && <motion.div initial={{ position: 'relative', right: -300, transitionTimingFunction: 'linear' }}
-                    animate={{ position: "relative", right: 0, transitionDuration: '0.1s', transitionTimingFunction: 'linear' }}
-                    exit={{ position: "relative", right: -700, transitionDuration: '0.3s', transitionTimingFunction: 'linear' }}
-                >
-                    <div onClick={(e) => e.stopPropagation()} className={s.content}>
-                        <div className={s.top}>
-                            <h3 className={s.title}>Корзина</h3>
-                            <button onClick={removeBasket} className={s.exitButton}>✖</button>
-                        </div>
 
-                        <div className={s.body}>
-                            {totalBasketItemsCount !== 0 ? <BasketWithProducts /> : basketItemsCheckout && isSetShopping ? <BasketWithoutProducts buttonCallback={removeBasket} descripton='Ваш заказ скоро будет передан курьерской доставке' title='Заказ оформлен!' img={chekoutJpg} /> : <BasketWithoutProducts img={withoutProductsJpg} buttonCallback={removeBasket} descripton='Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.' title="Корзина пустая" />}
-                        </div>
-                    </div>
-                </motion.div>}
-            </AnimatePresence>
+            <div onClick={(e) => e.stopPropagation()} className={cn(s.content, contentIsOpen ? s.contentIsOpen : s.contentIsClosed)}>
+                <div className={s.top}>
+                    <h3 className={s.title}>Корзина</h3>
+                    <button onClick={removeBasket} className={s.exitButton}>✖</button>
+                </div>
+
+                <div className={s.body}>
+                    {totalBasketItemsCount !== 0 ? <BasketWithProducts /> : basketItemsCheckout && isSetShopping ? <BasketWithoutProducts buttonCallback={removeBasket} descripton='Ваш заказ скоро будет передан курьерской доставке' title='Заказ оформлен!' img={chekoutJpg} /> : <BasketWithoutProducts img={withoutProductsJpg} buttonCallback={removeBasket} descripton='Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.' title="Корзина пустая" />}
+                </div>
+            </div>
+
 
         </div >
     )
