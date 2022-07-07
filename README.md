@@ -1,4 +1,4 @@
-!!! ПРОЕКТ ЕЩЕ В РАЗРАБОТКЕ !!!  
+# ПРОЕКТ ЕЩЕ В РАЗРАБОТКЕ 
   
   
 Пример интернет-магазина на React.  
@@ -15,7 +15,7 @@
   
     
 Потестить можете здесь:  
-http://ayvazmy4.beget.tech/
+https://react-sneakers-ln7tdiewe-ayvazmagomedov17.vercel.app/items
   
     
       
